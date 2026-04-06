@@ -1,0 +1,58 @@
+🚀 Estructura de Datos: Hype & Info
+Para entender cómo modelar entidades de forma limpia, dividimos el objeto en lo que es (atributos) y lo que hace (funciones), asegurando siempre la integridad de los datos.
+💎 Hype (Atributos)
+Son las propiedades o características del objeto. Es el "estado" de la instancia en un momento dado.
+Estáticos: No ejecutan lógica, solo guardan info (ej: nombre, color, precio).
+Identidad: Definen qué hace único a nuestro objeto.
+⚙️ Info (Funciones/Métodos)
+Es el comportamiento. Define qué puede hacer el objeto con sus atributos o cómo interactúa con otros.
+Acción: Transforman los datos o devuelven una respuesta (ej: calcularDescuento(), enviarMensaje()).
+Lógica: Aquí es donde vive la "inteligencia" de tu código.
+🛡️ Constraint: NOT NULL
+Es tu seguro de vida programando. Indica que un campo es obligatorio.
+Regla de Oro: Si un atributo es NOT NULL, la base de datos o el programa arrojará un error si intentás dejarlo vacío.
+Utilidad: Evita los famosos "NullPointerExceptions" y asegura que siempre tengas los datos críticos para que tus funciones trabajen.
+📝 Ejemplo en Código (Clean Look)
+sql
+-- Ejemplo en SQL para visualizar la estructura
+CREATE TABLE Producto (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL, -- Hype (Atributo obligatorio)
+    precio DECIMAL NOT NULL       -- Hype (Atributo obligatorio)
+);
+Usa el código con precaución.
+
+javascript
+// Ejemplo en JavaScript (POO)
+class Heroe {
+    constructor(nombre) {
+        if (!nombre) throw new Error("Nombre is NOT NULL"); // Validación manual
+        this.nombre = nombre; // Hype
+        this.energia = 100;   // Hype
+    }
+
+    atacar() { // Info (Función)
+        this.energia -= 10;
+        console.log(`${this.nombre} ha atacado!`);
+    }
+}
+Usa el código con precaución.
+
+💡 Resumen para el equipo
+Concepto	Tipo	Función Principal
+Hype	Atributo	Almacenar datos básicos.
+Info	Método	Ejecutar acciones y lógica.
+Not Null	Regla	Garantizar que el dato exista sí o sí.
+¿Te gustaría que le agregue algún badge de colores o un gráfico específico para alguna tecnología (Java, Python, SQL)?
+Verifica la información importante
+
+Te recomendamos que compruebes la información en varios sitios.
+Cerrar
+Más información
+Las respuestas de la IA pueden contener errores. Más información
+
+
+Ahora puedes compartir este hilo con otras personas
+
+
+
