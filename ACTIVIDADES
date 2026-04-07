@@ -11,3 +11,9 @@ import motplotlib.pyplot as pit
 hacer dos arreglos con numeros aleatorios
 arreglo x  arreglo y
 de 8 elementos
+
+funciomes
+sum()
+min()
+max()
+count()
